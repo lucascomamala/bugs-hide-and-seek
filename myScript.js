@@ -93,7 +93,7 @@ let links;
 let liveBtn;
 let srcBtn;
 
-for (let i = i; i < btns.length; i += 1) {
+for (let i = 1; i < btns.length; i += 1) {
   btns[i].onclick = function createModal() { // eslint-disable-line no-loop-func
     modal.style.display = 'block';
 
