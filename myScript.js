@@ -172,7 +172,7 @@ function buildStorage() {
     msg: msgEl.value,
   };
 
-  localStorage.setItem('data', JSON.stringify(storageObj));
+  localStorage.setItem('data', storageObj);
 }
 
 nameEl.addEventListener('input', buildStorage);
@@ -181,7 +181,7 @@ msgEl.addEventListener('input', buildStorage);
 
 // Loads saved content into the form
 window.addEventListener('load', () => {
-  const restored = JSON.parse(localStorage.getItem('data'));
+  const restored = localStorage.getItem('data');
   nameEl.value = restored.name;
   emailEl.value = restored.email;
   msgEl.value = restored.msg;
